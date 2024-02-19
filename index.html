@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="icon" type="image/png" href="imagenes/dda_logo.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="principal">
+        <section class="input-side">
+            <header class="logo">
+                <img width="" src="imagenes/dda_logo.png" alt="logo de alura">
+            </header>
+            <div class="formulario">
+                <textarea class="input" placeholder="Ingrese el texto aquí" id="input" cols="30" rows="10"></textarea>
+                <div class="contenedor-advertencia">
+                    <img src="imagenes/exclamation-icon.png" alt=" icono de exclamacion">
+                    <p class="texto-advertencia">Utilizar letras minúsculas y sin acento</p>
+                </div>
+                <div class="contenedor-botones">
+                    <button class="encriptar-btn">Encriptar</button>
+                    <button class="desencriptar-btn">Desencriptar</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="output-side">
+            <textarea class="output" id="output"></textarea>
+            <div class="contenedor-mensaje">
+                <div class="imagen-hombre">
+                    <img src="imagenes/man.png" alt="hombre curioso">
+                </div>
+                <p class="texto-notificacion">
+                    Ningún mensaje fue encontrado
+                </p>
+                <p class="texto-instrucciones">
+                    Ingresa el texto que desees encriptar o desencriptar
+                </p>
+            </div>
+            <button class="clipboard">Copiar</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <p> &copy Daniel Dans Abelenda - Alura Challenge</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

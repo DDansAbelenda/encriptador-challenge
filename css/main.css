@@ -1,0 +1,178 @@
+/*Contenedor Principal*/
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+    background: #F3F5FC;
+
+}
+
+.principal {
+    display: flex;
+}
+
+/*Seccion de logo y formulario*/
+.input-side {
+    display: flex;
+    margin: 1rem 1rem 0rem 1rem;
+    width: 65%;
+}
+
+/*Contenedor de textarea y botones*/
+.formulario {
+    width: 85%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+/*Textarea*/
+.input {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #0A3871;
+    background: transparent;
+    border: none;
+    width: 100%;
+    resize: none;
+    
+}
+
+.input::placeholder {
+    color: #0A3871;
+}
+
+.input:focus {
+    outline: none;
+}
+
+/*Texto de adevertencia entre textarea y botones*/
+.contenedor-advertencia {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.texto-advertencia {
+    margin-left: 0.2rem;
+    color: #495057;
+    font-size: 0.75rem;
+
+}
+
+/*Caja con los botones*/
+.contenedor-botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.encriptar-btn,
+.desencriptar-btn,
+.clipboard {
+    width: 48%;
+    padding: 1.5rem;
+    border: 1px solid #0A3871;
+    border-radius: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    cursor:pointer;
+}
+
+.encriptar-btn {
+    color: #FFFFFF;
+    background: #0A3871;
+}
+
+.encriptar-btn:hover {
+    background: #072B61;
+}
+
+.desencriptar-btn {
+    color: #0A3871;
+    background: transparent;
+}
+
+.desencriptar-btn:hover {
+    background: #E9ECF8;
+}
+
+
+/*************************************/
+
+/*Seccion de salida*/
+.output-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 1rem 0rem 1rem;
+    background: #FFFFFF;
+    width: 30%;
+    border-radius: 1rem;
+    box-shadow: 0rem 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.05);
+
+}
+
+/*Textarea donde se muestra la salida, solo se muestra cuando se presiona en encriptar*/
+.output {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #495057;
+    border: none;
+    background: transparent;
+    display: none;
+    width: 85%;
+    height: 90%;
+    resize: none;
+}
+
+.output:focus {
+    outline: none;
+}
+
+/*Foto del Muñeco y textos*/
+.contenedor-mensaje {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+/*Texto más grande*/
+.texto-notificacion {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0rem;
+}
+
+/*Texto más pequeño*/
+.texto-instrucciones {
+    font-size: 1rem;
+
+}
+
+/*Boton de copiar, solo se muestra cuando se presiona en encriptar*/
+.clipboard {
+    display: none;
+    color: #0A3871;
+    background: transparent;
+    width: 85%;
+    margin-top: 0.1rem;
+}
+
+.clipboard:hover {
+    background: #E9ECF8;
+}
+
+
+/*Pie de página*/
+.footer{
+    margin: 0 auto;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #072B61;
+}

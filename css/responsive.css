@@ -1,0 +1,58 @@
+/* Vista Tablet y Movil */
+@media (max-width: 768px) {
+
+    .principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*Seccion de logo y formulario*/
+    .input-side {
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 1rem 0rem 0rem 1rem;
+    }
+
+    .formulario {
+        margin: 0 auto;
+    }
+
+    /*Seccion de salida*/
+    .output-side {
+        width: 90%;
+        margin: 2rem;
+    }
+
+    .output {
+        height: 15rem;
+    }
+
+    .imagen-hombre {
+        display: none;
+    }
+    .footer{
+        margin-bottom: 2rem;
+    }
+
+}
+
+/*Especificaciones de movil*/
+@media(max-width: 375px) {
+    
+    /*Cambiar el sentido de los botones del formulario*/
+    .contenedor-botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*Botones del formulario, cambiar tamaño*/
+    .encriptar-btn,
+    .desencriptar-btn {
+        width: 90%;
+        margin: 0.5rem;
+    }
+}
