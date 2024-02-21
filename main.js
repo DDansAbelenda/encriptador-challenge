@@ -41,27 +41,32 @@ btnClipboard.addEventListener("click", copiar);
 
 function encriptar() {
     let texto = document.getElementById("input").value;
-    if (!regex.test(texto)) {
+    if (texto === "") {
+        mostrarNotificacion("El texto no puede ser vacío");
+    } else if (!regex.test(texto)) {
         for (let letra in encriptador) {
             texto = texto.replaceAll(letra, encriptador[letra]);
         }
         escribirSalida(texto);
         borrarEntrada();
     } else {
-        alert("El texto no debe contener mayúsculas, acentos ni caracteres especiales");
+        mostrarNotificacion("El texto no debe contener mayúsculas, acentos ni caracteres especiales");
     }
 }
 
 function desencriptar() {
     let texto = document.getElementById("input").value;
-    if (!regex.test(texto)) {
+    if (texto === "") {
+        mostrarNotificacion("El texto no puede ser vacío");
+    }
+    else if (!regex.test(texto)) {
         for (let cadena in desencriptador) {
             texto = texto.replaceAll(cadena, desencriptador[cadena]);
         }
         escribirSalida(texto);
         borrarEntrada();
     } else {
-        alert("El texto no debe contener mayúsculas, acentos ni caracteres especiales");
+        mostrarNotificacion("El texto no debe contener mayúsculas, acentos ni caracteres especiales");
     }
 }
 
@@ -84,3 +89,22 @@ function borrarEntrada() {
     document.getElementById("input").value = "";
 }
 
+function mostrarNotificacion(mensaje) {
+    const notificacion = document.getElementById('notificacion');
+    const notificacionContainer = document.getElementById('notificacionContainer');
+
+    // Agregar un icono si se proporciona
+    const iconoHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+
+    notificacion.innerHTML = `${iconoHTML} ${mensaje}`;
+
+    // Mostrar la notificación
+    notificacionContainer.style.display = 'block';
+    notificacion.classList.add('mostrar');
+
+    // Ocultar la notificación después de 3 segundos (ajustable)
+    setTimeout(() => {
+        notificacion.classList.remove('mostrar');
+        notificacionContainer.style.display = 'none';
+    }, 3000);
+}
