@@ -72,7 +72,7 @@ function desencriptar() {
 
 function copiar() {
     navigator.clipboard.writeText(textarea.value).then(function () {
-        alert('Texto copiado al portapapeles');
+        mostrarNotificacion('Texto copiado al portapapeles');
     });
 }
 
