@@ -172,7 +172,15 @@ body {
 /*Pie de página*/
 .footer{
     margin: 0 auto;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: center;
+    color: #01193d;
+}
+.footer a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer a:hover {
     color: #072B61;
 }
